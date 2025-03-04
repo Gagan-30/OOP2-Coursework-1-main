@@ -1,142 +1,86 @@
-Overview
+# Encryption Assignment
 
-In this assignment you will implement a rudimentary encryption tool for secret inter-agent communication. Each word in the dictionary has been mapped to a letter. A single word can be encoded by the sequence of words associated with each letter. For example, suppose the mapping included
+## Overview
+This assignment focuses on implementing a rudimentary encryption tool for secret inter-agent communication. The encryption system maps words to letters, allowing messages to be encoded using predefined word mappings. The assignment is designed to test proficiency in Java concepts such as collections, generics, input/output streams, inheritance, and object-oriented program design.
 
-Quickly -> P
-Fly -> A
-Loudly -> S
-Squawk -> S
-Quietly -> W
-Rest -> O
-Cheerful -> R
-Bird -> D
+## Features
+- **WordStore Class:** Stores mappings of characters to lists of words and allows retrieval of random words for encryption.
+- **VerbStore Class:** Extends `WordStore`, modifying verbs into the present continuous tense.
+- **Encrypt Class:** Converts a given word into an encrypted sequence of words based on predefined mappings.
+- **Decrypt Class:** Reverses the encryption process to retrieve the original word.
+- **Testing:** A dedicated `AssignmentTest` class ensures functionality of all implemented classes.
 
-then the word PASSWORD would be encoded as “quickly flying loudly squawking quietly resting cheerful bird”. Notice that the tense of the verbs has changed.
+## Implementation Details
+1. **WordStore Class**
+    - Supports case-insensitive storage and retrieval of words.
+    - Loads word mappings from a file.
+    - Returns random words associated with given characters.
 
-You will implement programs that encrypt and decrypt the communications. For instance, the encryption program could run as follows:
+2. **VerbStore Class**
+    - Converts verbs into their present continuous tense form before returning them.
 
-$ java Encrypt password
-quickly
-flying
-loudly
-squawking
-quietly
-resting
-cheerful
-bird
+3. **Encrypt Class**
+    - Encrypts words using stored mappings.
+    - Outputs encrypted words in an alternating pattern of verbs and adverbs, ending with an adjective and noun.
 
-and the decryption program could run as
+4. **Decrypt Class**
+    - Reverses the encryption process to retrieve the original input.
 
-$ java Decrypt quickly flying loudly squawking quietly resting cheerful bird
-password
+5. **AssignmentTest Class**
+    - Implements assertions and test cases to verify correctness.
 
-The words used for each character or character sequence are randomly chosen from some given lists, and multiple runs can produce different results.
+## Questions and Marks
+### **Question 1: WordStore [10 Marks]**
+- Implement a class `WordStore` to store mappings of characters to words.
+- Methods: `add(char key, String item)`, `getRandomItem(char key)`.
+- Ensure case-insensitive storage and retrieval.
 
-$ java Encrypt password
-questionably
-dating
-cozily
-dying
-wistfully
-criminalizing
-palpable
-roughage
+### **Question 2: Populating the WordStore [30 Marks]**
+- Implement a file-based constructor for `WordStore`.
+- Load word mappings from files.
+- Implement `VerbStore` to handle verbs in the present continuous tense.
 
-Carefully crafted mapping files with adjectives, adverbs, nouns, and verbs are provided. You should store these files in the same directory as your Java code.
+### **Question 3: Creating Encrypted Sentences [25 Marks]**
+- Implement `Encrypt` to generate encrypted word sequences.
+- Ensure correct sentence structure (Verb? (Adverb Verb)* Adjective Noun).
+- Handle command-line arguments.
 
-You will need several methods of the Java API for this assignment. The best resource for help on how to invoke a method or use an object is the official API documentation.
+### **Question 4: Decryption [20 Marks]**
+- Implement `Decrypt` to reverse encryption and recover the original word.
+- Ensure correct handling of input.
 
-You are free to make design decisions throughout the assignment and may make use of the Java standard library classes as you feel appropriate. However, all code should compile with javac *.java. You cannot use external or third-party libraries in your solutions.
-Question 1: WordStore[10 Marks]
+### **Testing and Code Quality [15 Marks]**
+- Implement `AssignmentTest` to validate all functionalities.
+- Ensure good code organization, readability, and object-oriented design.
 
-Data Structure. The encryption relies on the WordStore class for mapping characters to lists of words. Mathematically, the structure corresponds to a partial function from characters to lists of strings.
+## Running the Code
+### Compilation
+```sh
+javac *.java
+```
 
-Create a WordStore class that has
+### Running Encryption
+```sh
+java Encrypt <word>
+```
 
-    a constructor WordStore() that takes no arguments and initialises the store;
-    a method void add(char key, String item) that associates the key to the item. It should not overwrite existing mappings but add to them;
-    a method String getRandomItem(char key) that returns a random word (using the Random class) from the strings that key has been associated with. The word returned should be in lower case. If key is not mapped to any words, the method should return null.
+### Running Decryption
+```sh
+java Decrypt <encrypted words>
+```
 
-As an example, suppose the following code was run
+### Running Tests
+```sh
+java -enableassertions AssignmentTest
+```
 
-WordStore store = new WordStore();
-store.add('a', "Chair");
-store.add('a', "Table");
+## Submission Requirements
+- Ensure all `.java` files (WordStore.java, VerbStore.java, Encrypt.java, Decrypt.java, AssignmentTest.java) are submitted.
+- Code should compile and run without errors.
+- Follow best practices for OOP, coding style, and readability.
 
-Then store.getRandomItem('a') should return either chair or table.
-
-Ensure that your code is case-insensitive. The store should return the same items regardless of the case of the key. E.g. store.getRandomItem('A') should behave the same as store.getRandomItem('a'). Returned words should be in lower case.
-
-Testing You can test your answer with the testing tool.
-
-$ java -jar assignment1TesterStudent.jar
-
-You should see that the teststestQ1_01_MainStore, testQ1_02_MainStore_NonExisting, and testQ1_03_MainStore_Random all pass.
-
-Your Own Testing Class. Now write a your own tests for your new class. Create a class AssignmentTest. This class should have a main method that runs a series of tests to make sure that your WordStore class works as intended. You should test all of the methods in the WordStore class. Marks will be awarded for good code organisation.
-
-You may find the assert keyword in Java useful for your testing code. If you add lines such as
-
-assert x > 0;
-
-And run your code with the -enableassertions flag
-
-$ java -enableassertions AssignmentTest
-
-the run will fail if an assertion is not true.
-Question 2: Populating the WordStore[30 Marks]
-
-Loading the Word Lists. Declare a second constructor for WordStore that takes a file name as an argument and loads a list of activities into the map using the class BufferedReader. This constructor should be declared to throw an IOException, which signals that it could not successfully load the file. Make sure to call close() on the BufferedReader within the constructor, even in the event of an exception being thrown. Use an appropriate technique from the lectures.
-
-Each line in the item list is a word mapping of the form “word,letter”. Find an appropriate method in the Java String documentation for splitting a line of the file into the word and the letter. You should fill the store such that the letter of each item is associated with the word.
-
-Testing Test your new code by adding more testing code to AssignmentTest that checks that the new WordStore constructor loads activities from the passed file.
-
-When running the testing tool, you should now see that the tests testQ2_01_LoadFile, testQ2_02_LoadFileThenRetrieve, and testQ2_03_LoadFileThenRetrieve all pass.
-
-Verb Store. The verbs in the word files are given in the infinitive form. For constructing sentences, the present continuous tense will yield better results. Write a class VerbStore that acts like WordStore except the returned words are converted to the present continuous tense. For the purposes of this assignment, you can do this by removing a trailing “e” (if present) and adding “ing” as a suffix.
-
-Marks will be awarded for a good program design that avoids repetition of code.
-
-The testing tool should now pass tests testQ2_04_SpecialStore1 and testQ2_05_SpecialStore2.
-
-Help My Tests are Failing! Common causes of failure may be the following.
-
-    The word list files are not in the directory where you are running the tester. Make sure all files are in the same directory.
-    When declaring the WordStore constructor that takes a file, do not delete the constructor that takes no arguments: the tester will expect both to be present.
-
-Question 3: Creating Encrypted Sentences[25 Marks]
-
-Generating. Create a new class Encrypt that does the actual encryption of words. It should load a different WordStore for each of the different word lists (adjectives, adverbs, nouns, and verbs).
-
-Add a method List<String> encrypt(String input) that iterates through a string, looking up characters in the different stores and adding the resulting words to a list of strings that is then returned as the result. Structure your code elegantly, use any additional methods you think are appropriate, and avoid duplicating code.
-
-To make the encrypted sentence sound convincing, you have to enforce a certain order of word types. The sentence should always end with a noun, preceded by an adjective if there are enough letters. Remaining letters should be encoded by an alternating sequence of adverbs and verbs that ends with a verb.
-
-Written as a regular expression, the pattern should match a suffix of:
-
-Verb? (Adverb Verb)* Adjective Noun
-
-Hint: sometimes problems are easier if you work backwards.
-
-Testing Test your new code by adding more testing code to AssignmentTest. Although the output is random, you can still verify that the result is of the right length, for example.
-
-Input Processing. Add a main method to Encrypt that takes the word given as the first command line argument and prints the resulting sentence with a word on each line. Make sure to handle any exceptions properly. Test your code by running your program with several different words as inputs.
-
-Your program should now pass testQ3_Encrypt of the testing tool.
-Question 4: Decryption [20 Marks]
-
-Write a counterpart program Decrypt. It should provide a main method and when run from the command line, should decrypt a given sentence. For example
-
-$ java Decrypt quickly flying loudly squawking quietly resting cheerful bird
-password
-
-(Note that the input words are not in quotes.)
-
-You will need to design your own program structure. Marks will be awarded for good choices of data structures and well-designed code. You may add methods and fields to existing classes, as long as they do not break your solutions to previous parts.
-
-Hint: use a StringBuilder to build strings. You may find some of its features useful.
-
-Your program should now pass testQ4_Decrypt of the testing tool.
-
-Testing Test your new code by adding more testing code to AssignmentTest. Although the output is random, you can still verify that the result is of the right length, for example.
+## Notes
+- The use of external libraries is not allowed.
+- The provided `assignment1TesterStudent.jar` can be used for testing.
+- The word lists (adjectives.txt, adverbs.txt, nouns.txt, verbs.txt) must be in the same directory as the Java files.
+- Late submissions may incur penalties as per university guidelines.
