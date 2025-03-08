@@ -17629,6 +17629,8 @@ contortionist,i
 contour,i
 contraband,o
 contrabassoon,z
+contraception,m
+contraceptive,y
 contract,a
 contractility,p
 contraction,y

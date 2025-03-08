@@ -116,6 +116,7 @@ public class AssignmentTest {
             // Test decryption
             List<String> encryptedSentence = List.of("quickly", "flying", "loudly", "squawking", "quietly", "resting", "cheerful", "bird");
             String decryptedWord = decryptor.decrypt(encryptedSentence);
+            System.out.println(decryptedWord);
             assert decryptedWord.equals("password") : "Decrypted word should be 'password'";
             System.out.println("Decrypted word: " + decryptedWord);
 

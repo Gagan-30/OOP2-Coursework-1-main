@@ -54,7 +54,7 @@ public class Decrypt {
         String baseVerb = word.toLowerCase();
         if (baseVerb.endsWith("ing")) {
             baseVerb = baseVerb.substring(0, baseVerb.length() - 3);
-            if (baseVerb.endsWith("e")) {
+            if (!baseVerb.endsWith("e")) {
                 baseVerb += "e"; // Add back the 'e' if it was removed during encryption
             }
         }
