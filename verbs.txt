@@ -303,7 +303,6 @@ awaken,r
 award,q
 awe,v
 ax,s
-axe,v
 azure,x
 babbitt,e
 babble,i
@@ -358,7 +357,6 @@ barb,w
 barbarize,r
 barbeque,c
 barber,a
-bare,e
 bargain,h
 barge,e
 bark,b
@@ -376,7 +374,6 @@ baste,y
 bastinado,l
 bat,g
 batch,s
-bate,x
 batfowl,l
 bathe,g
 batik,i
@@ -464,7 +461,6 @@ bewilder,x
 bias,y
 bicycle,f
 bid,o
-bide,h
 bifurcate,u
 bight,h
 bilge,h
@@ -741,7 +737,6 @@ can,d
 canal,s
 cancel,p
 candle,r
-cane,e
 canker,q
 cannibalize,d
 cannon,u
@@ -887,7 +882,6 @@ chew,w
 chill,r
 chime,p
 chin,g
-chine,i
 chink,c
 chip,q
 chirk,j
@@ -1311,7 +1305,6 @@ crust,k
 cry,i
 crystallize,f
 cub,m
-cube,f
 cuckoo,q
 cuddle,h
 cudgel,h
@@ -1625,9 +1618,7 @@ dimension,t
 diminish,f
 dimple,q
 din,c
-dine,a
 ding,w
-dinge,s
 dip,k
 diphthongize,d
 direct,k
@@ -1773,7 +1764,6 @@ dope,d
 dose,q
 doss,k
 dot,u
-dote,r
 double,s
 doubt,c
 douche,a
@@ -2359,7 +2349,6 @@ galvanize,h
 gamble,g
 gang,u
 gap,a
-gape,n
 garage,w
 garden,g
 gargle,y
@@ -2478,7 +2467,6 @@ grimace,u
 grin,l
 grind,v
 grip,s
-gripe,x
 grit,e
 grizzle,h
 groak,n
@@ -2564,7 +2552,6 @@ hash,l
 hasp,c
 hat,d
 hatch,b
-hate,c
 haul,d
 haunt,m
 have,l
@@ -2650,7 +2637,6 @@ hook,v
 hoop,f
 hoot,x
 hop,u
-hope,k
 hopple,f
 horn,i
 horripilate,h
@@ -3670,7 +3656,6 @@ pair,r
 pal,g
 palatalize,g
 palaver,d
-pale,o
 pall,g
 palpate,z
 palpebrate,m
@@ -3694,7 +3679,6 @@ paraphrase,z
 parcel,w
 parch,t
 pardon,g
-pare,z
 parget,m
 park,a
 parlay,b
@@ -3827,14 +3811,12 @@ place,l
 plagiarize,a
 plait,z
 plan,e
-plane,b
 plank,k
 plant,n
 plaster,v
 plasticize,m
 plastinate,r
 plat,e
-plate,b
 platinize,k
 platitudinize,b
 play,a
@@ -3982,7 +3964,6 @@ prick,f
 prickle,v
 pride,e
 prim,b
-prime,b
 prink,t
 print,x
 prioritize,z
@@ -4128,7 +4109,6 @@ raffle,e
 raft,x
 rafter,j
 rag,g
-rage,q
 raid,y
 rail,f
 railroad,g
@@ -4147,14 +4127,12 @@ rank,z
 ransom,z
 rant,v
 rap,d
-rape,i
 rappel,g
 rarefy,s
 rasp,j
 rasterize,e
 rat,j
 ratchet,f
-rate,r
 ratiocinate,z
 ration,a
 rationalize,k
@@ -4524,7 +4502,6 @@ rice,i
 rick,v
 rid,h
 riddle,s
-ride,g
 ridge,y
 ridicule,w
 riff,u
@@ -4570,7 +4547,6 @@ roughen,x
 roughhouse,g
 round,m
 rout,e
-route,p
 row,k
 rub,o
 rubberize,o
@@ -4681,7 +4657,6 @@ scowl,d
 scram,z
 scramble,x
 scrap,h
-scrape,d
 scratch,a
 scream,f
 screen,p
@@ -4868,7 +4843,6 @@ simplify,s
 simulate,v
 sin,i
 sing,g
-singe,d
 single,u
 singsong,n
 singularize,c
@@ -4914,7 +4888,6 @@ slant,d
 slap,s
 slash,a
 slat,u
-slate,n
 slather,g
 slave,x
 sled,j
@@ -4938,7 +4911,6 @@ sliver,b
 slog,a
 sloganeer,w
 slop,t
-slope,o
 slosh,e
 slot,p
 slouch,w
@@ -4983,7 +4955,6 @@ snick,p
 snicker,f
 sniff,n
 snip,v
-snipe,w
 snivel,i
 snog,m
 snooker,k
@@ -5045,7 +5016,6 @@ spang,p
 spangle,m
 spank,l
 spar,r
-spare,e
 sparge,n
 spark,u
 sparkle,f
@@ -5136,7 +5106,6 @@ stable,q
 stack,r
 staff,g
 stag,g
-stage,n
 stagger,j
 stagnate,u
 stain,h
@@ -5154,7 +5123,6 @@ staple,t
 star,c
 starboard,m
 starch,d
-stare,m
 stargaze,j
 start,s
 startle,a
@@ -5235,7 +5203,6 @@ stridulate,q
 strike,n
 string,f
 strip,v
-stripe,s
 strive,n
 stroke,t
 stroll,h
@@ -5360,7 +5327,6 @@ suture,t
 swab,g
 swaddle,x
 swag,e
-swage,j
 swagger,w
 swallow,z
 swamp,k
@@ -5417,7 +5383,6 @@ tango,z
 tank,c
 tap,f
 tapdance,w
-tape,p
 taper,d
 tar,r
 target,r
@@ -5506,7 +5471,6 @@ time,r
 tin,i
 tincture,l
 ting,g
-tinge,b
 tingle,r
 tinker,g
 tinkle,q
@@ -5663,7 +5627,6 @@ twiddle,d
 twig,o
 twill,g
 twin,o
-twine,a
 twinge,g
 twinkle,p
 twirl,t
@@ -5921,7 +5884,6 @@ waltz,o
 wamble,q
 wan,x
 wander,b
-wane,k
 wangle,s
 want,o
 wanton,o
@@ -6007,7 +5969,6 @@ wince,r
 winch,y
 wind,k
 windsurf,a
-wine,a
 wink,y
 winkle,i
 winnow,s
