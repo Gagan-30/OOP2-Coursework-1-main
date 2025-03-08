@@ -40,6 +40,13 @@ public class WordStore {
         return words.get(random.nextInt(words.size()));
     }
 
+    // Returns the list of words associated with a given key (or an empty list if none exist)
+    public List<String> getWordsForKey(char key) {
+        char lowerKey = Character.toLowerCase(key);
+        return store.getOrDefault(lowerKey, new ArrayList<>());
+    }
+
+
     // Loads words from a file and maps them to letters
     private void loadFromFile(String filename) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
