@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+import java.io.IOException;
+>>>>>>> f4ee652 (Completed Question 3)
 
 public class Encrypt {
     private final WordStore adjectiveStore;
@@ -78,4 +82,8 @@ public class Encrypt {
             System.err.println("Error loading word stores: " + e.getMessage());
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f4ee652 (Completed Question 3)
