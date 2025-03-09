@@ -16,6 +16,7 @@ public class Decrypt {
         loadWordList("nouns.txt");
     }
 
+    // Loads words from a file and maps them to characters.
     private void loadWordList(String filename) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
@@ -34,6 +35,7 @@ public class Decrypt {
         }
     }
 
+    // Decrypt the input list of words into a single string
     public String decrypt(List<String> words) {
         StringBuilder result = new StringBuilder();
         for (String word : words) {
@@ -66,6 +68,7 @@ public class Decrypt {
         return result.toString();
     }
 
+    // Main method for command-line execution
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Usage: java Decrypt <word1> <word2> ...");

@@ -5,10 +5,12 @@ public class VerbStore extends WordStore {
         super();
     }
 
+    // Loads words from a file
     public VerbStore(String filename) throws IOException {
         super(filename);
     }
 
+    // Retrieves a random verb and converts it to present continuous form.
     @Override
     public String getRandomItem(char key) {
         String item = super.getRandomItem(key);
@@ -18,6 +20,7 @@ public class VerbStore extends WordStore {
         return item;
     }
 
+    // Transforms a verb into its present continuous form (e.g. "run" → "running").
     private String transformToPresentContinuous(String verb) {
         verb = verb.toLowerCase();
         int length = verb.length();
@@ -36,6 +39,7 @@ public class VerbStore extends WordStore {
         return verb;
     }
 
+    // Checks if a verb ends in a single vowel followed by a consonant.
     private boolean isSingleVowelConsonant(String verb) {
         int length = verb.length();
         char lastChar = verb.charAt(length - 1);

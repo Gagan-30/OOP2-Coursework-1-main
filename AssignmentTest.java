@@ -9,6 +9,7 @@ public class AssignmentTest {
         testDecrypt();
     }
 
+    //Tests the functionality of the WordStore class by adding and retrieving words
     private static void testWordStore() {
         WordStore store = new WordStore();
         store.add('a', "Chair");
@@ -21,6 +22,7 @@ public class AssignmentTest {
         System.out.println("WordStore tests passed.");
     }
 
+    //Tests the VerbStore class to ensure proper verb conjugation (e.g., hop -> hopping)
     private static void testVerbStore() {
         VerbStore store = new VerbStore();
         store.add('h', "hop");
@@ -54,14 +56,15 @@ public class AssignmentTest {
         assert item4.equals("stopping") : "VerbStore returned an unexpected item: " + item4;
 
         // Test "run" → "running"
-        String item = store.getRandomItem('s');
-        System.out.println("Retrieved item (stop): " + item4);
-        assert item4 != null : "VerbStore failed to retrieve an item.";
-        assert item4.equals("stopping") : "VerbStore returned an unexpected item: " + item4;
+        String item5 = store.getRandomItem('r');
+        System.out.println("Retrieved item (run): " + item5);
+        assert item5 != null : "VerbStore failed to retrieve an item.";
+        assert item5.equals("running") : "VerbStore returned an unexpected item: " + item5;
 
         System.out.println("VerbStore tests passed.");
     }
 
+    //Tests the Encrypt class by encrypting the word "password" and verifying output size
     private static void testEncrypt() {
         try {
             Encrypt encryptor = new Encrypt();
@@ -74,6 +77,7 @@ public class AssignmentTest {
         }
     }
 
+    //Tests the Decrypt class by ensuring a known encryption correctly decrypts to "password".
     private static void testDecrypt() {
         try {
             Decrypt decryptor = new Decrypt();
